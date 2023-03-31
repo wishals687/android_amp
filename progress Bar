@@ -1,0 +1,15 @@
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        val builder=AlertDialog.Builder(this)
+        val dialogView = layoutInflater.inflate(R.layout.progress_bar,null)
+        val message = dialogView.findViewById<TextView>(R.id.text1)
+        message.text="Downlaoding data......."
+        builder.setView(dialogView)
+        builder.show()
+
+
+    }
+
+}
