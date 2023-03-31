@@ -1,0 +1,14 @@
+//Launch crome form button
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        val b1= findViewById<Button>(R.id.redirect)
+        b1.setOnClickListener{
+            val intent = Intent()
+            intent.action= Intent.ACTION_VIEW
+            intent.data= Uri.parse("https://www.google.com/")
+            startActivity(intent)
+        }
+    }
+}
